@@ -398,7 +398,7 @@ print(f"Y shape: {Y_seq.shape}  → (샘플수, 1)")
 
 마지막으로 시작하기 전에 PyTorch에 대해서 간단하게 알아보겠습니다.
 
-@@작성 필요 (간단한 설명 -> 딥러닝 모델을 쉽게 만들고 학습시킬 수 있게 해줌)
+PyTorch는 Python 기반의 오픈소스 딥러닝 프레임워크이다. 딥러닝 모델을 쉽게 구현하고 학습시킬 수 있으며, GPU를 활용한 빠른 연산을 지원한다. 본 프로젝트에서는 RNN, LSTM, Transformer 모델을 구현하고 학습시키기 위해 PyTorch를 사용하였다.
 
 ---
 
@@ -406,7 +406,7 @@ print(f"Y shape: {Y_seq.shape}  → (샘플수, 1)")
 
 ### 1-1. RNN 모델 설명
 
-@@작성 필요 (이 모델이 어떻게 굴러가는지 간단하게)
+RNN(Recurrent Neural Network)은 순서가 있는 데이터를 처리하기 위한 순환 신경망 모델이다. 이전 시점의 정보를 다음 계산에 활용할 수 있어 시계열 데이터 분석에 적합하다. 하지만 데이터가 길어질수록 과거 정보를 잘 기억하지 못하는 기울기 소실 문제가 발생할 수 있다. 본 프로젝트에서는 태양광 발전량 예측을 위한 기본 비교 모델로 RNN을 사용하였다.
 
 ### 1-2. RNN 모델 코딩
 
@@ -1092,15 +1092,21 @@ NSRDB 사이트 (기상 상황 데이터) - https://nsrdb.nlr.gov/data-viewer
 
 --
 
-RNN 모델 설명 : @@작성 필요 (출처)
+RNN 모델 설명 : RNN(Recurrent Neural Network)은 순서가 있는 데이터를 처리하기 위한 순환 신경망 모델이다. 이전 시점의 정보를 현재 계산에 활용할 수 있어 시계열 데이터 분석에 적합하다. 하지만 데이터가 길어질수록 과거 정보를 잘 기억하지 못하는 기울기 소실(Vanishing Gradient) 문제가 발생할 수 있다.
+
+출처 : https://en.wikipedia.org/wiki/Recurrent_neural_networ
 
 
 
-LSTM 모델 설명 : @@작성 필요 (출처)
+LSTM 모델 설명 : LSTM(Long Short-Term Memory)은 RNN의 기울기 소실 문제를 개선하기 위해 개발된 모델이다. 입력 게이트, 삭제 게이트, 출력 게이트를 통해 필요한 정보는 유지하고 불필요한 정보는 제거할 수 있어 장기적인 시계열 패턴을 학습하는 데 효과적이다.
+
+출처 : https://en.wikipedia.org/wiki/Long_short-term_memory
 
 
 
-Transformer 모델 설명 : @@작성 필요 (출처)
+Transformer 모델 설명 : Transformer는 Self-Attention 메커니즘을 활용하여 입력 데이터 전체의 관계를 동시에 학습하는 모델이다. RNN과 LSTM처럼 순차적으로 데이터를 처리하지 않아 긴 시퀀스에서도 중요한 정보를 효과적으로 파악할 수 있으며, 최근 다양한 인공지능 모델의 기반 구조로 활용되고 있다.
+
+출처 : https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)
 
 
 
